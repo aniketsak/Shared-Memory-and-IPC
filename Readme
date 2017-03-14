@@ -1,0 +1,13 @@
+Running the Application:
+
+To run the application proceed with the following steps:
+1) Open terminal and do make clean; make
+2) Make sure that there no message queues and shared memory copies which are not in use ; using ipcs command
+   If any, delete them using the ipcrm command
+3) Run the server program as a daemon by providing two arguments, the first argument being the number of segments and the second being the segment size
+4) After running the server, run the userapp application providing file name(s) as an argument(s)
+
+Notes:
+For ease of checking we have defined a variable in userapp.c  called 'k'. If k is 0, synchronous function will be called and if k is 1, asynchronous function will be called. The value of k is obtained at run-time using scanf function.
+
+If you want to use the library in a different program, make sure the make file is edited to add the program to be compiled
